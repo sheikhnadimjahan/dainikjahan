@@ -1,0 +1,27 @@
+Execution Mode.
+
+Do NOT rewrite existing collections.
+
+Audit the repository and only create the missing infrastructure required to make the project compile.
+
+Create only:
+
+- payload.config.ts
+- tsconfig.json
+- next.config.ts
+- src/access/*
+- src/utilities/*
+- src/blocks/*
+- src/collections/Users.ts
+- src/collections/Categories.ts
+- src/collections/Media.ts
+
+Fix imports if necessary.
+
+Do not modify Articles, Roles, Advertisements, EmailInbox or RSSFeeds except to resolve broken imports.
+
+Run type check mentally before committing.
+
+Commit message:
+
+feat(core): complete Payload infrastructure and make project compile
