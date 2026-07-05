@@ -1,6 +1,6 @@
 import path from 'path'
 import { buildConfig } from 'payload/config'
-import { MongoDBAdapter } from '@payloadcms/adapter-mongodb'
+import { MongoDBAdapter } from '@payloadcms/db-mongodb'
 import payloadSEO from '@payloadcms/plugin-seo'
 
 import { Articles } from './src/collections/Articles'
