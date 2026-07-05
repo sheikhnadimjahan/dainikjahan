@@ -1,27 +1,115 @@
-Execution Mode.
 
-Do NOT rewrite existing collections.
+EXECUTION MODE (Complete Infrastructure)
 
-Audit the repository and only create the missing infrastructure required to make the project compile.
+You are working inside the repository sheikhnadimjahan/dainikjahan.
 
-Create only:
+The existing collections are already implemented and must NOT be rewritten.
 
-- payload.config.ts
-- tsconfig.json
-- next.config.ts
-- src/access/*
-- src/utilities/*
-- src/blocks/*
-- src/collections/Users.ts
-- src/collections/Categories.ts
-- src/collections/Media.ts
+Existing collections:
 
-Fix imports if necessary.
+* Articles
+* Roles
+* Advertisements
+* EmailInbox
+* RSSFeeds
 
-Do not modify Articles, Roles, Advertisements, EmailInbox or RSSFeeds except to resolve broken imports.
+They are the source of truth.
 
-Run type check mentally before committing.
+Your task is to COMPLETE the missing Payload infrastructure.
 
-Commit message:
+Create missing root files
+
+* payload.config.ts
+* tsconfig.json
+* next.config.ts
+
+Create missing collections
+
+* src/collections/Users.ts
+* src/collections/Categories.ts
+* src/collections/Media.ts
+
+These collections must be fully compatible with the existing Articles collection.
+
+Create missing access files
+
+* src/access/authenticated.ts
+* src/access/anyone.ts
+* src/access/authenticatedOrPublished.ts
+
+Create missing utilities
+
+* src/utilities/generatePreviewPath.ts
+
+Create missing block configs
+
+* src/blocks/Banner/config.ts
+* src/blocks/Code/config.ts
+* src/blocks/MediaBlock/config.ts
+
+Hooks
+
+If necessary, move
+
+* populateAuthors.ts
+* revalidateArticle.ts
+
+into
+
+src/collections/Articles/hooks/
+
+and update imports.
+
+Do not rewrite their logic.
+
+Register everything
+
+Update payload.config.ts so every collection is properly registered.
+
+Ensure:
+
+* Payload CMS v3
+* Next.js 16
+* React 19
+* MongoDB adapter
+* Sharp
+* Lexical editor
+* SEO plugin compatibility
+
+Validation
+
+Before committing:
+
+* Resolve every broken import.
+* Resolve every missing dependency.
+* Ensure the project compiles.
+* Ensure TypeScript has no unresolved references.
+* Do not leave placeholder code.
+
+Cleanup
+
+Delete the temporary file:
+
+xxx
+
+Nothing else.
+
+Absolutely DO NOT
+
+* Rewrite Articles
+* Rewrite Roles
+* Rewrite Advertisements
+* Rewrite EmailInbox
+* Rewrite RSSFeeds
+* Change business logic
+* Remove existing hooks
+* Downgrade dependencies
+
+Only complete the missing infrastructure.
+
+Commit
 
 feat(core): complete Payload infrastructure and make project compile
+
+⸻
+
